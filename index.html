@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Order Page</title>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+        <div class="nav-links">
+          GIFTCART
+        </div>
+        <ul class="nav-menu">
+          <li class="nav1-links" title="Home">Home</li>
+          <li class="nav1-links" title="Myorder">MyOrder</li>
+          <li class="nav1-links" title="PlaceOrder">PlaceOrder</li>
+          <li class="nav1-links" title="Logout">Logout</li>
+        </ul>
+    </div>
+    <h1>Order Page</h1>
+    
+    <table>
+      <tr>
+        <th>Product</th>
+        <th>ProductNAME</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Action</th>
+      </tr>
+      <tr>
+        <td><img src="Images/Flowers.jpg" alt="Flowers" width="100"></td>
+        <td>Flowers</td>
+        <td>$10</td>
+        <td><input type="number" id="flowersQty" min="0" onchange="calculateBill()"></td>
+        <td>
+          <button class="edit-button" onclick="editProduct('flowers')"><i class="fas fa-edit"></i></button>
+          <button class="delete-button" onclick="deleteProduct('flowers')"><i class="fas fa-trash"></i></button>
+        </td>
+      </tr>
+      <tr>
+        <td><img src="Images/Surprisebox.jpg" alt="Surprise Box" width="100"></td>
+        <td>Surprise Box</td>
+        <td>$15</td>
+        <td><input type="number" id="surpriseBoxQty" min="0" onchange="calculateBill()"></td>
+        <td>
+          <button class="edit-button" onclick="editProduct('surpriseBox')"><i class="fas fa-edit"></i></button>
+          <button class="delete-button" onclick="deleteProduct('surpriseBox')"><i class="fas fa-trash"></i></button>
+        </td>
+      </tr>
+      <tr>
+        <td><img src="Images/Toys.jpg" alt="Toys" width="100"></td>
+        <td>Toys</td>
+        <td>$5</td>
+        <td><input type="number" id="toysQty" min="0" onchange="calculateBill()"></td>
+        <td>
+          <button class="edit-button" onclick="editProduct('toys')"><i class="fas fa-edit"></i></button>
+          <button class="delete-button" onclick="deleteProduct('toys')"><i class="fas fa-trash"></i></button>
+        </td>
+      </tr>
+      <tr>
+        <td><img src="Images/Chocolate.jpg" alt="Chocolate Box" width="100"></td>
+        <td>Chocolate Box</td>
+        <td>$8</td>
+        <td><input type="number" id="chocolateBoxQty" min="0" onchange="calculateBill()"></td>
+        <td>
+          <button class="edit-button" onclick="editProduct('chocolateBox')"><i class="fas fa-edit"></i></button>
+          <button class="delete-button" onclick="deleteProduct('chocolateBox')"><i class="fas fa-trash"></i></button>
+        </td>
+      </tr>
+      <tr>
+        <td><img src= "Images/Photoframe.jpg" alt="Photo Frame" width="100"></td>
+        <td>Photo Frame</td>
+        <td>$12</td>
+        <td><input type="number" id="photoFrameQty" min="0" onchange="calculateBill()"></td>
+        <td>
+          <button class="edit-button" onclick="editProduct('photoFrame')"><i class="fas fa-edit"></i></button>
+          <button class="delete-button" onclick="deleteProduct('photoFrame')"><i class="fas fa-trash"></i></button>
+        </td>
+      </tr>
+    </table>
+
+    <h2>Bill</h2>
+    <ul id="billList"></ul>
+    <p class="total-bill" id="totalBill"></p>
+    <div class="bill-buttons">
+      <button class="payment-button">Payment</button>
+    </div>
+    
+    <script src="Orderpage.js"> </script>
+  </div>
+</body>
+</html>
